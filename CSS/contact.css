@@ -1,0 +1,129 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 100px;
+    color: #fff;
+}
+
+.contact>h2{
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(246,0,255,1) 0%, rgba(255,136,0,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    gap: 100px;
+}
+
+.contact-info {
+    width: 40%;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, rgba(246,0,255,1) 0%, rgba(255,136,0,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.contact-info p {
+    margin: 20px 0;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.contact-info i {
+    margin-right: 15px;
+    color:rgba(246, 0, 255, 1);
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    color: #fc466b;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #2c2c2c;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.contact-form button.submit-btn {
+    padding: 15px 30px;
+    border: none;
+    background: linear-gradient(
+    90deg,
+    rgba(246, 0, 255, 1) 0%,
+    rgba(255, 136, 0, 1) 100%
+  );
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.4s ease-in-out, color 0.1s ease-in-out;
+}
+
+.contact-form button.submit-btn:hover {
+    background: linear-gradient(
+    90deg,
+    rgba(255, 136, 0, 1) 0%,
+    rgba(246, 0, 255, 1) 100%
+  );
+  color: #121212;
+}
+
+@media (max-width: 768px){
+
+    .contact{
+        padding: 0;
+    }
+    
+    .contact>h2{
+        text-align: left;
+        width: 100%;
+        display: none;
+    }
+
+    .container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-info, .contact-form{
+        width: 100%;
+        text-align: left;
+    }
+}

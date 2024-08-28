@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100svh;
+  background-color: #121212;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient( rgba(246, 0, 255, 1) 0%, rgba(255, 136, 0, 1) 100%);
+    border-radius: 10px;
+    transition: background 0.4s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(rgba(255, 136, 0, 1) 0%, rgba(246, 0, 255, 1) 100%);
+    transition: background 0.4s ease-in-out;
+}
