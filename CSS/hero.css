@@ -99,15 +99,25 @@ p {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
+
+  p {
+    font-size: 16px;
+  }
+
+
   .hero-buttons {
     gap: 15px;
   }
 
   .res-btn,
   .hero-connect {
-    width: 100%;
     padding: 12px;
+  }
+
+  .personal-img{
+    width: 150px;
+  height: 150px;
   }
 }

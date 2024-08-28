@@ -25,37 +25,31 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Abdulrhman.</a>
-            <div class="navbar-nav-wrapper">
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#hero">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <a href="#contact" class="btn btn-custom ms-auto">Connect with me</a>
-            </div>
+    <nav class="nav">
+        <div class="brand">Abdulrhman.</div>
+        <div class="items">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="connect-nav">
+            <a href="#contact">Connect with me</a>
+        </div>
+        <div class="toggle-btn">
+            <span>&#9776;</span>
         </div>
     </nav>
+
 
 
     <section class="hero" id="hero">
         <div class="hero-content">
             <div class="hero-img">
+                <div class="circle-animation"></div>
                 <img src="Images/my photo.jpeg" alt="My Photo" class="personal-img">
             </div>
+
             <article>
                 <h1>I'm <span class="highlight">Abdulrhman Mohamed</span>, frontend developer based in Egypt.</h1>
                 <p>I am a junior frontend developer from Egypt. Currently a CS student at Arab Academy for Science,
@@ -68,6 +62,7 @@
         </div>
     </section>
 
+
     <section class="about" id="about">
         <h1>About Me</h1>
         <div class="about-content">
@@ -75,10 +70,13 @@
                 <img src="Images/my photo.jpeg" alt="My Photo">
             </div>
             <div class="right">
-                <p>I’m an emerging Frontend Developer with a solid foundation and hands-on experience in building and styling web
-                applications. I’m passionate about creating user-friendly interfaces and am excited to apply my skills to new projects.</p>
-                <p>Eager to expand my knowledge, I stay updated with the latest technologies and best practices. My dedication to frontend
-                development drives me to continually learn and collaborate effectively within the industry.</p>
+                <p>I’m an emerging Frontend Developer with a solid foundation and hands-on experience in building and
+                    styling web
+                    applications. I’m passionate about creating user-friendly interfaces and am excited to apply my
+                    skills to new projects.</p>
+                <p>Eager to expand my knowledge, I stay updated with the latest technologies and best practices. My
+                    dedication to frontend
+                    development drives me to continually learn and collaborate effectively within the industry.</p>
                 <div class="skills">
                     <div class="skill-bar">
                         <div class="skill-title">HTML</div>
@@ -190,6 +188,12 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="js/skills-bar.js"></script>
+
+    <script>
+        document.querySelector('.toggle-btn').addEventListener('click', function () {
+            document.querySelector('.nav').classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

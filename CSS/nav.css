@@ -1,97 +1,113 @@
-.navbar {
-  padding: 20px;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #121212;
   position: sticky;
   top: 0;
-  z-index: 999;
-  background-color: #121212;
+  z-index: 1000;
 }
 
-.navbar-brand {
+.brand {
   font-size: 24px;
-  color: white;
   font-weight: bold;
+  color: white;
   cursor: pointer;
-  transition: background 0.4s ease-in-out,
-    -webkit-text-fill-color 0.4s ease-in-out, -webkit-background-clip 0.4s ease-in-out;
 }
 
-
-.navbar-brand:hover {
-  background: linear-gradient(
-    90deg,
-    rgba(246, 0, 255, 1) 0%,
-    rgba(255, 136, 0, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.navbar-nav {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.navbar-nav .nav-link {
+.items a, 
+.connect-nav a {
+  margin-left: 20px;
   color: white;
-  font-size: 18px;
-  padding-left: 20px;
-  padding-right: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link.active {
-  color: #f600ff;
+.items a:hover, 
+.connect-nav a:hover {
+  color: #ee31ff;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #f600ff;
-}
-
-.navbar-nav {
-  flex-grow: 1;
-  justify-content: center;
-}
-
-.btn-custom {
-  background: linear-gradient(
-    90deg,
-    rgba(246, 0, 255, 1) 0%,
-    rgba(255, 136, 0, 1) 100%
-  );
-  color: white;
-  border-radius: 20px;
+.connect-nav a {
   padding: 10px 20px;
-  font-size: 18px;
-  border: none;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(246, 0, 255, 1) 0%,
+    rgba(255, 136, 0, 1) 100%
+  );
+  color: white;
+  text-align: center;
+  transition: background 0.4s ease-in-out, color 0.1s ease-in-out;
 }
 
-.btn-custom:hover {
+.connect-nav a:hover {
   background: linear-gradient(
     90deg,
     rgba(255, 136, 0, 1) 0%,
     rgba(246, 0, 255, 1) 100%
   );
+  color: #121212;
 }
 
-.navbar-nav-wrapper {
-  display: flex;
-  align-items: center;
-  width: 100%;
+/* Hover Effect on Brand */
+.brand:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 136, 0, 1) 0%,
+    rgba(246, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* Toggle Button Styling */
+.toggle-btn span {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 25px;
+  color: rgba(246, 0, 255, 1);
+  border-radius: 5px;
+}
+
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .navbar-nav-wrapper {
+  .items,
+  .connect-nav {
+    display: none;
+  }
+
+  .toggle-btn {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav.active .items {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-top: -12%;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    border-radius: 10px;
   }
 
-  .navbar-nav {
-    margin-bottom: 15px;
+  .nav.active .connect-nav {
+    display: none;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .toggle-btn {
+    display: none;
   }
 
-  .btn-custom {
-    margin-left: 0;
+  .connect-nav {
+    display: block;
   }
 }
